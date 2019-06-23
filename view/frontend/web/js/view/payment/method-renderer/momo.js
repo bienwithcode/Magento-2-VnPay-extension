@@ -1,20 +1,20 @@
 define(
     [
+        'ko',
+        'jquery',
         'Magento_Checkout/js/view/payment/default'
     ],
-    function (Component) {
+    function (ko, $, Component, setPaymentMethodAction) {
         'use strict';
 
         return Component.extend({
             defaults: {
+                redirectAfterPlaceOrder: false,
                 template: 'MG_VnPay/payment/momo'
             },
 
             afterPlaceOrder: function () {
-                // setPaymentMethodAction(this.messageContainer);
-                // return false;
-                alert('hi');
-                return false;
+                window.location.replace(url.build('vnpay/payment/momo'));
             }
         });
     }

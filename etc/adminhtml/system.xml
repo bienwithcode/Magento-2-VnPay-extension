@@ -24,6 +24,39 @@
                     <label>Enable</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="partner_code" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>PARTNER CODE</label>
+                    <!--<validate>required-entry</validate>-->
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="access_key" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ACCESS KEY</label>
+                    <!--<validate>required-entry</validate>-->
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="secret_key" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>SECRET KEY</label>
+                    <!--<validate>required-entry</validate>-->
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="api_endpoint" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API ENDPOINT</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                    <depends>
+                        <field id="active">1</field>
+                    </depends>
+                </field>
             </group>
         </section>
     </system>
