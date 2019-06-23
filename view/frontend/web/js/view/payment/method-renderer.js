@@ -1,19 +1,22 @@
 define(
     [
-        'uiComponent',
-        'Magento_Checkout/js/model/payment/renderer-list'
+        'ko',
+        'jquery',
+        'Magento_Checkout/js/view/payment/default',
+        'mage/url'
     ],
-    function (
-        Component,
-        rendererList
-    ) {
+    function (ko, $, Component, url) {
         'use strict';
-        rendererList.push(
-            {
-                type: 'momo',
-                component: 'MG_VnPay/js/view/payment/method-renderer/momo'
+
+        return Component.extend({
+            defaults: {
+                redirectAfterPlaceOrder: false,
+                template: 'MG_VnPay/payment/momo'
+            },
+
+            afterPlaceOrder: function () {
+                window.location.replace(url.build('vnpay/payment/momo'));
             }
-        );
-        return Component.extend({});
+        });
     }
 );
