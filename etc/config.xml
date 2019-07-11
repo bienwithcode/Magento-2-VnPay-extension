@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mgvnpay>
+            <general>
+                <activate>0</activate>
+            </general>
+        </mgvnpay>
+        <payment>
+            <momo>
+                <payment_action>capture</payment_action><!-- You can use another methor like capture  -->
+                <active>1</active>
+                <title>Pay with momo</title>
+                <order_status>pending_payment</order_status><!-- set default order status-->
+                <model>MG\VnPay\Model\Momo</model>
+            </momo>
+        </payment>
+    </default>
+</config>

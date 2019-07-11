@@ -1,0 +1,23 @@
+{
+  "name": "MG/module-vnpay",
+  "description": "Magento 2 VnPay extension",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "MageGlobal",
+      "email": "biennhutptit@gmail.com",
+      "homepage": "",
+      "role": "student"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "MG\\VnPay\\": ""
+    }
+  }
+}

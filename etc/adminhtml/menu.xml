@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MG_VnPay::config"
+             title="MAGE-GLOBAL"
+             module="MG_VnPay"
+             sortOrder="15"
+             resource="Magento_Backend::content"
+        />
+        <!--<add id="MG_VnPay::vnpay_config" title="Configuration" module="MG_VnPay" sortOrder="99" parent="MG_VnPay::vnpay" action="adminhtml/system_config/edit/section/vnpay" resource="MG_VnPay::vnpay_config"/>-->
+
+        <add id="MG_VnPay::config_system"
+             title="Config System"
+             module="MG_VnPay"
+             sortOrder="10"
+             resource="MG_VnPay::config_system"
+             parent="MG_VnPay::config"
+             action="adminhtml/system_config/edit/section/MG_VnPay/"
+        />
+    </menu>
+</config>
